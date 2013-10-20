@@ -11,11 +11,19 @@ describe "StaticPages" do
         page.should have_selector('h1', :text => 'Sample App')
       end
 
+<<<<<<< HEAD
       it "should have the title 'Home'" do
         visit '/static_pages/home'
         page.should have_selector('title',
           :text => "#{base_title} | Home")
       end
+=======
+        it "should have the title 'Home'" do
+          visit '/static_pages/home'
+          page.should have_selector('title',
+            :text => "#{base_title} | Home")
+        end
+>>>>>>> static-pages
     end
 
     describe "Help page" do
@@ -25,11 +33,19 @@ describe "StaticPages" do
         page.should have_selector('h1', :text => 'Help')
       end
 
+<<<<<<< HEAD
       it "should have the title 'Help'" do
         visit '/static_pages/help'
         page.should have_selector('title',
           :text => "#{base_title} | Help")
       end
+=======
+        it "should have the title 'Help'" do
+          visit '/static_pages/help'
+          page.should have_selector('title',
+            :text => "#{base_title} | Help")
+        end
+>>>>>>> static-pages
     end
 
     describe "About page" do
@@ -41,6 +57,7 @@ describe "StaticPages" do
 
       it "should have the title 'About Us'" do
           visit '/static_pages/about'
+<<<<<<< HEAD
           page.should have_selector('title',
             :text => "#{base_title} | About Us")
       end
@@ -58,5 +75,29 @@ describe "StaticPages" do
         page.should have_selector('title',
           :text => "#{base_title} | Contact Us" )
       end
+=======
+          page.should have_selector('h1', :text => 'About Us')
+        end
+
+        it "should have the title 'About Us'" do
+            visit '/static_pages/about'
+            page.should have_selector('title',
+                :text => "#{base_title} | About Us")
+        end
+    end
+
+        describe "Contact page" do
+
+        it "should have the h1 'Contact Us'" do
+          visit '/static_pages/contact'
+          page.should have_selector('h1', :text => 'Contact Us')
+        end
+
+        it "should have the title 'Contact Us'" do
+            visit '/static_pages/contact'
+            page.should have_selector('title',
+                :text => "#{base_title} | Contact Us")
+        end
+>>>>>>> static-pages
     end
 end
